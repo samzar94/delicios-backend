@@ -15,13 +15,14 @@ app.use(morgan('short'))
 
 app.use(express.json()) //para convertir el body de una peticion a json
 app.use(express.urlencoded({ extended: true }))
-// 'mongodb://localhost/amazona', {}
-
-mongoose.connect(process.env.MONGODB_URL),
+//localhost/amazona'
+// process.env.MONGODB_URL
+mongoose.connect('mongodb://localhost/amazona'),
   {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
+    // useUnifiedTopology: true,
+    // useCreateIndex: true,
+    //MONGODB_URL=mongodb+srv://store-admin:1234@cluster0.u8wdp.mongodb.net/cluster0
   } //'mongodb://localhost/amazona'
 const __dirname = path.resolve()
 
